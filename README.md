@@ -6,6 +6,16 @@ lot of different icon sets and changing between them can be a pain. The idea of 
 correct icons in your application to the different sets and even apply modifiers without fixing your mark up to using 
 one icon set.
 
+Install
+-------
+
+You can install via composer
+
+```
+composer require peterfox/hieroglyph
+```
+
+
 Using Hieroglyph with Laravel
 -----
 
