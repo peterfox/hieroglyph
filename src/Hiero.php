@@ -73,6 +73,22 @@ class Hiero
         }
         return $this->glyph($falseName);
     }
+
+    /**
+     * @param string $name
+     * @param bool $includePrefix
+     * @return string
+     * @throws MissingIconException
+     */
+    public function lookup($name, $includePrefix = true)
+    {
+        if (array_key_exists($name, $this->icons)) {
+
+            return $includePrefix ? $this->addPrefix($this->icons[$name]) : $this->icons[$name];
+        }
+
+        throw new MissingIconException($name, array_keys($this->icons));
+    }
     
     public function getTemplate()
     {
